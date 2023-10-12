@@ -33,11 +33,11 @@
                 <td>
                     <div class="butt">
                         <a href="{{ route('showEtudiant', $etudiant->id) }}" class="btn btn-primary">select</a>
-                        <!-- <form action="{{ route('etudient.destroy', $etudient->id) }}" method="post" class="d-inline">
+                         <form action="{{ route('etudiant.destroy', $etudiant->id) }}" method="post" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
-                        </form> -->
+                        </form> 
                     </div>
                 </td>
             </tr>

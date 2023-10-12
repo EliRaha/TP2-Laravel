@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('etudiants', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->text('adresse');
+            $table->string('adresse');
             $table->string('phone');
             $table->string('email');
             $table->date('date_de_naissance');
-            $table->integer('ville_id');
+            //$table->unsignedBigInteger('ville_id');
+            $table->foreign('ville_id')->references('id')->on('villes');            
 
             $table->timestamps();
         });

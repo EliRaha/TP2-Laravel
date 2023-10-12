@@ -68,7 +68,7 @@ class VilleController extends Controller
      */
     public function edit(Ville $ville)
     {
-        $ville = Ville::find($id);
+        $ville = Ville::Find($ville->id);
         return view('villes.edit', ['ville' => $ville]);
     }
 

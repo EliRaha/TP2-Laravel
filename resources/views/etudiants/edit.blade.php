@@ -52,7 +52,7 @@
 
         <select class=" form-control" id="ville_id" name="ville_id" required>
             @foreach($villes as $ville)
-            <option value="{{ $ville->id }}" {{ $etudient->ville_id == $ville->id ? 'selected' : ""}}>{{ $ville->nom }}</option>
+            <option value="{{ $ville->id }}" {{ $etudiant->ville_id == $ville->id ? 'selected' : ""}}>{{ $ville->nom }}</option>
             @endforeach
 
         </select>

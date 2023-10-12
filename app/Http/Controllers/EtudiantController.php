@@ -24,7 +24,7 @@ class EtudiantController extends Controller
             // dd("ok");
             $etudiants = Etudiant::all();
             // dd($etudiant);
-            return view('etudiants.index', ['etudients' => $etudiants]);
+            return view('etudiants.index', ['etudiants' => $etudiants]);
          
         }
     }

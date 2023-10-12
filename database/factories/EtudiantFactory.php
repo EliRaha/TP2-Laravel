@@ -27,8 +27,8 @@ class EtudiantFactory extends Factory
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->unique()->safeEmail,
             'date_de_naissance' => $this->faker->dateTimeBetween('-65 years', '-14 years')->format('Y-m-d'),
-            'ville_id' => Ville::factory(),
-
+            'ville_id' => Ville::all()->random()->id,
+            //'ville_id' => Ville::factory(),
 
 
 
