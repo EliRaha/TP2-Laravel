@@ -98,7 +98,7 @@ class VilleController extends Controller
      */
     public function destroy(Ville $ville)
     {
-        $ville->etudient()->delete();
+        $ville->etudiant()->delete();
         $ville->delete();
 
         return redirect()->back();

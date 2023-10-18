@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
   
-    <h4 class="text-center p-3" style="background-color: #F7FAFC;">You can see list of the students here . For more details, click on the select button.</h4>
+    <h4 class="text-center p-3" style="background-color: #F7FAFC;">You can see list of the students here </h4>
 
     <a href="{{ route('etudiant.create') }}" class="btn btn-success m-2">Create</a>
     <table class="table table-striped">

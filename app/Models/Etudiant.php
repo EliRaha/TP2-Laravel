@@ -15,7 +15,8 @@ class Etudiant extends Model
         'phone',
         'email',
         'date_de_naissance',
-        'ville_id'
+        'ville_id',
+        'user_id'
 
     ];
 
@@ -23,5 +24,21 @@ class Etudiant extends Model
     public function ville()
     {
         return $this->hasOne('App\Models\Ville', 'id', 'ville_id');
+    }
+    
+    use HasFactory;
+    public function user(){
+        
+        return $this->hasOne('App\Models\User', 'id', 'id');
+    }
+    
+    public function article()
+    {
+        return $this->hasMany('App\Models\Article', 'user_id', 'id');
+    }
+
+    public function getEmailAttribute()
+    {
+        return $this->user->email;
     }
 }

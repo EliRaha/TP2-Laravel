@@ -1,3 +1,56 @@
+Etudiante: Elham Rahimi
+Documentation:
+
+Sur ce site Web, le processus d'inscription est la première étape pour les utilisateurs. Une fois inscrits, ils peuvent se connecter au site. Le site Web offre un support linguistique complet, permettant aux utilisateurs de le découvrir en deux langues. Si un utilisateur visite le site en tant qu'invité, il sera accueilli par le message « Bonjour Guest ». D'un autre côté, les utilisateurs connectés seront accueillis par « Bonjour 'nome de utilisateur' ».
+L’accès à la page de l’article est réservé aux étudiants inscrits uniquement.
+Les utilisateurs doivent s'inscrire en tant qu'étudiants avant de pouvoir consulter les articles. Après avoir obtenu une carte d’étudiant unique, ils peuvent accéder à la page de l’article. Tous les étudiants ont la possibilité de créer des articles, mais seul l'auteur d'un article peut le supprimer ou le mettre à jour. Le site Web prend en charge une fonctionnalité bilingue, ce qui signifie que les étudiants peuvent saisir des informations en français et en anglais. Quelle que soit la langue choisie, les articles sont accessibles dans les deux langues.
+Des règles similaires s'appliquent aux documents. Toutes les entrées sont validées pour garantir l’intégrité des données. De plus, les utilisateurs peuvent télécharger et télécharger des fichiers dans la section documents du site Web. Enfin, les utilisateurs ont la possibilité de se déconnecter lorsqu'ils ont fini d'utiliser le site.
+Ce guide donne un aperçu du processus d'inscription du site Web, du support linguistique, des restrictions d'accès, de la création et de la gestion des articles, des fonctionnalités bilingues,
+gestion des documents, validation des entrées et fonctionnalité de déconnexion. Pour une analyse plus détaillée et experte, il serait nécessaire de prendre en compte les détails spécifiques de mise en œuvre, la structure de la base de données, les mesures de sécurité et toute fonctionnalité ou exigence supplémentaire du site Web.
+J'ai fait tous les contrôleurs et modèles nécessaires pour que le document soit également paginé (dans le code est clair) mais d'après moi, j'ai eu un problème, j'ai également ajouté une vidéo à la place ou partagée dans webdev. Je n'ai pas pu contacter depuis chez moi.
+
+Commands:
+
+-php artisan make:Controller DocumentController -r
+
+-php artisan make:model Document
+
+-php artisan make:factory DocumentFactory
+
+-php artisan migrae:fresh
+
+-php artisan db:seed
+
+-php artisan make:model Article
+
+-php artisan make:factory ArticleFactory
+
+-php artisan make:migration -m Article
+
+-php artisan make:Controller ArticleController -r
+
+-php artisan make:Controller LocalizationController
+
+-php artisan make:middleware Localization
+
+-php artisan make:Controller CustomAuthController
+
+-php artisan make:middleware testMid
+
+-php artisan make:controller localizationController
+
+-php artisan tinker "App\Models\Ville::factory()->times(15)->create();"
+
+-composer require barryvdh/laravel-dompdf
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

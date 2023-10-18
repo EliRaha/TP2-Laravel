@@ -20,9 +20,10 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->date('date_de_naissance');
-            //$table->unsignedBigInteger('ville_id');
+            $table->unsignedBigInteger('ville_id');
+            $table->unsignedBigInteger('id');
             $table->foreign('ville_id')->references('id')->on('villes');            
-
+            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }
